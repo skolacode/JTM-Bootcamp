@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic CSS</title>
+
+  <style>
+
+    .container {
+      display: flex;
+      flex: 1;
+      justify-content: center;
+      align-items: center;
+      animation: spin 5s infinite linear;
+
+      transform-style: preserve-3d;
+    }
+    
+    .rotateMe {
+      display: flex;
+      flex: 1;
+      justify-content: center;
+      align-items: center;
+      transform-style: preserve-3d;
+      transform: rotateX(335deg) rotateY(335deg) rotateZ(0deg);
+    }
+
+    .cubeFace {
+      height: 300px;
+      width: 300px;
+
+      display: flex;
+
+      position: absolute;
+    }
+
+    .front {
+      transform: translateZ(160px);
+      background-color: yellow;
+    }
+
+    .back {
+      transform: translateZ(-160px);
+      background-color: red;
+    }
+
+    .top {
+      transform: rotateX(90deg) translateZ(150px);
+      background-color: green;
+    }
+
+    .bottom {
+      transform: rotateX(-90deg) translateZ(150px);
+      background-color: grey;
+    }
+
+    .left {
+      transform: rotateY(-90deg) translateZ(150px);
+      background-color: orange;
+    }
+
+    .right {
+      transform: rotateY(90deg) translateZ(150px);
+      background-color: blue;
+    }
+
+    @keyframes spin {
+      from {
+        transform: rotateX(335deg) rotateY(335deg) rotateZ(0deg);
+      }
+      to {
+        transform: rotateX(695deg) rotateY(695deg) rotateZ(360deg);
+      }
+    }
+
+    .cube {
+      border: 1px solid black;
+      height: 100px;
+      width: 100px;
+    }
+  </style>
+</head>
+<body style="display: flex; background-color: lightgrey; height: 100vh;">
+
+  <!-- What we will do
+  
+    1. Cube have 9 cube each side
+    2. cube have 6 sides
+    3. let's do one at a time
+  -->
+  
+  <div class="container">
+
+    <div class="rotateMe">
+
+    <!-- Front -->
+    <div class="cubeFace front">
+      <div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+      </div>
+
+      <div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+      </div>
+
+      <div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+      </div>
+    </div>
+
+    <!-- Back -->
+    <div class="cubeFace top">
+      <div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+      </div>
+
+      <div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+      </div>
+
+      <div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+      </div>
+    </div>
+
+    <!-- Left -->
+    <div class="cubeFace back">
+      <div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+      </div>
+
+      <div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+      </div>
+
+      <div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+      </div>
+    </div>
+
+    <!-- Right -->
+    <div class="cubeFace bottom">
+      <div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+      </div>
+
+      <div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+      </div>
+
+      <div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+      </div>
+    </div>
+
+    <!-- Top -->
+    <div class="cubeFace left">
+      <div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+      </div>
+
+      <div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+      </div>
+
+      <div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+      </div>
+    </div>
+
+    <!-- Bottom -->
+    <div class="cubeFace right">
+      <div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+      </div>
+
+      <div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+      </div>
+
+      <div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+      </div>
+    </div>
+
+    </div>
+  </div>
+</body>
+</html>
