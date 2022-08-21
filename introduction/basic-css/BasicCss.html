@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic CSS</title>
+
+  <style>
+    .rotateThis {
+      padding: 10px;
+      text-align: center;
+      border: 1px solid black;
+      border-radius: 5px;
+
+      animation: mymove 3s linear infinite;
+
+      position: relative;
+    }
+
+    @keyframes mymove {
+      100% {
+        transform: rotate(360deg)
+      }
+
+      from {
+        top: 0px;
+      }
+
+      to {
+        top: 200px;
+      }
+    }
+  </style>
+</head>
+<body style="display: flex; background-color: lightgrey; height: 100vh;">
+
+  <!-- What we will do
+  
+    1. Add a colors
+    2. change font style
+    3. positionting
+
+    a. Let's do inline style first
+  -->
+  <div 
+    style="
+      display: flex; 
+      flex: 1; 
+      justify-content: center; 
+      align-items: center; 
+      flex-direction: column;
+
+      position: relative;
+    "
+  >
+    <p>Hello World</p>
+
+    <p>Let's create our first CSS</p>
+
+    <div class="rotateThis">
+      <p>Let's auto rotate this</p>
+    </div>
+  </div>
+
+</body>
+</html>
